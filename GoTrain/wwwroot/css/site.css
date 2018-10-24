@@ -1,37 +1,95 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿body {
+    background-color: black;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.gradient-wrapper {
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(black, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(black, white); /* Standard syntax */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,black), color-stop(100%,white));
+    margin-top: 70px;
+    background-repeat: no-repeat;
+}
+nav {
+    color: white;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.container body-content {
+    max-width: 1000px;
+    min-height: 100vh;
+    background-color: white;
+    margin: 0 auto;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.header-h1 {
+    font-size: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
     }
+}
+
+#address-textarea {
+    padding-top: 5%;
+    z-index: 0;
+    resize: none;
+    width: 100%;
+    height: 20%;
+    border: none;
+}
+
+    #address-textarea::-webkit-input-placeholder {
+        color: #888;
+        text-align: center;
+        height: 80%;
+    }
+
+#address-textarea:-moz-placeholder { /* Firefox 18- */
+    color: #888;
+    text-align: center;
+    height: 80%;
+}
+
+    #address-textarea::-moz-placeholder { /* Firefox 19+ */
+        color: #888;
+        text-align: center;
+        height: 80%;
+    }
+
+    #address-textarea:-ms-input-placeholder {
+        color: #888;
+        text-align: center;
+        height: 80%;
+    }
+
+.addressField p {
+    text-align: center;
+    z-index: 0;
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.mapouter {
+    text-align: right;
+    height: 500px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 0;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 600px;
+    z-index: 0;
 }
