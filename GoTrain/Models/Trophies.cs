@@ -5,13 +5,14 @@ namespace GoTrain.Models
 {
     public partial class Trophies
     {
-        public string TrophyName { get; set; }
-        public string Description { get; set; }
-        public int Counter { get; set; }
+        
         public int Id { get; set; }
-        public int Goal { get; set; }
-        public int? TraningspartnerForeignKey { get; set; }
+        public int Counter { get; set; }
+        public string UserForeignKey { get; set; }
+        public int Trophylistkey { get; set; }
 
-        public Trainingspartners TraningspartnerForeignKeyNavigation { get; set; }
+        public AspNetUsers UserForeignKeyNavigation { get; set; }
+
+        public TrophyList trophyList { get; set; }
     }
 }

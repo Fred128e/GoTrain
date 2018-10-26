@@ -5,10 +5,10 @@ namespace GoTrain.Models
 {
     public partial class TraningsPartnerSession
     {
-        public int TraningsPartnerId { get; set; }
+        public string UserId { get; set; }
         public int TraningsSessionId { get; set; }
 
-        public Trainingspartners TraningsPartner { get; set; }
+        public AspNetUsers TraningsPartner { get; set; }
         public TrainingsSessions TraningsSession { get; set; }
     }
 }
