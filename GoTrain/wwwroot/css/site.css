@@ -36,6 +36,9 @@ nav {
         width: 100%;
     }
 }
+.navbar {
+    background-color: black;
+}
 
 #address-textarea {
     padding-top: 5%;
