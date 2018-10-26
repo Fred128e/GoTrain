@@ -1,8 +1,4 @@
 ﻿body {
-    background-color: black;
-}
-
-.gradient-wrapper {
     background: white; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
@@ -12,22 +8,23 @@
     margin-top: 70px;
     background-repeat: no-repeat;
 }
-nav {
-    color: white;
-}
 
-.container body-content {
+.gradient-wrapper {
+    background: white; /* For browsers that do not support gradients */
     max-width: 1000px;
     min-height: 100vh;
     background-color: white;
     margin: 0 auto;
 }
 
+.bodymargin {
+    margin: 10px 10px 10px 10px;
+}
+
 .header-h1 {
     font-size: 100px;
     text-align: center;
     text-transform: uppercase;
-    color: white;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
@@ -43,7 +40,6 @@ nav {
     resize: none;
     width: 100%;
     height: 20%;
-    border: none;
 }
 
     #address-textarea::-webkit-input-placeholder {
@@ -92,9 +88,5 @@ nav {
     height: 500px;
     width: 600px;
     z-index: 0;
-}
-.About-class{
-    color: white;
-
 }
 
