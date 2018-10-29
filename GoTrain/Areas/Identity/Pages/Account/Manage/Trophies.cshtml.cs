@@ -27,6 +27,8 @@ namespace GoTrain.Areas.Identity.Pages.Account.Manage
 
         public string userID = "";
         public string Id2 { get; set; }
+        public List<Trophies> Trophies2 { get; set; }
+
         private WelfareDenmarkContext _context = new WelfareDenmarkContext();
 
         public void OnGet()
@@ -34,6 +36,34 @@ namespace GoTrain.Areas.Identity.Pages.Account.Manage
             userID = _userManager.GetUserId(User);
             var UsersID = _context.AspNetUsers.FirstOrDefault(c => c.Id == userID);
             Id2 = UsersID.Id;
+
+            var trophies1 = _context.Trophies.Where(c => c.UserForeignKeyNavigation.Id == userID);
+            List<Trophies> list = new List<Trophies>();
+
+            foreach (var item in trophies1)
+            {
+                var TrophyLis = _context.TrophyLists.First(c => c.TrophylistId == item.Trophylistkey);
+
+                TrophyList trophyL = new TrophyList()
+                {
+                    TrophyName = TrophyLis.TrophyName, TrophylistId = TrophyLis.TrophylistId, Description = item.trophyList.Description, Goal = item.trophyList.Goal
+
+
+                };
+                Trophies trophy = new Trophies
+                {
+                    Id = item.Id, Counter = item.Counter, UserForeignKey = item.UserForeignKey, trophyList = trophyL
+                };
+
+                list.Add(trophy);
+
+
+            }
+
+            Trophies2 = list;
+
+
+
 
         }
 
