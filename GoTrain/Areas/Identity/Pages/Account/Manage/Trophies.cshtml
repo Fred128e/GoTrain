@@ -1,0 +1,20 @@
+﻿@page
+@model TrophiesModel
+@{
+}
+
+<p>Her ses dine trofæer! Godt arbejde.</p>
+
+<ul style="list-style-type: none; padding-left: 0;">
+    @foreach (var item in Model.Trophies2)
+    {
+    <li>
+        @item.trophyList.TrophyName
+        <br />
+        @item.trophyList.Description
+        <br />
+        <p>Du har opnået @item.Counter ud af @item.trophyList.Goal</p>
+        <p>-----------------</p>
+    </li>
+    }
+</ul>
