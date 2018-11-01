@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -11,5 +12,17 @@
     <div class="gmap_canvas">
         <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=odense&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         <a href="https://www.pureblack.de">homepage erstellen</a>
+
     </div>
+
+    <div>
+        <form action="/Traningsmakker/Post" method="Post">
+            <input type="number" name="postnummer" value="" />
+            <input type="submit" value="Søg på postnummer" />
+
+
+        </form>
+
+    </div>
+    
 </div>
