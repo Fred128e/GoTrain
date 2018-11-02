@@ -1,20 +1,23 @@
 ﻿@page
 @model TrophiesModel
 @{
+    ViewData["Title"] = "Trofæer";
 }
+
+<h4>@ViewData["Title"]</h4>
 
 <p>Her ses dine trofæer! Godt arbejde.</p>
 
 <ul style="list-style-type: none; padding-left: 0;">
-    @foreach (var item in Model.Trophies2)
+    @foreach(var item in Model.Trophies2)
     {
-    <li>
-        @item.trophyList.TrophyName
-        <br />
-        @item.trophyList.Description
-        <br />
-        <p>Du har opnået @item.Counter ud af @item.trophyList.Goal</p>
-        <p>-----------------</p>
-    </li>
+        <li>
+            @item.trophyList.TrophyName
+            <br />
+            @item.trophyList.Description
+            <br />
+            <p>Du har opnået @item.Counter ud af @item.trophyList.Goal</p>
+            <p>-----------------</p>
+        </li>
     }
 </ul>

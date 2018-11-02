@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Log ind";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -10,11 +10,11 @@
     <div class="col-md-4">
         <section>
             <form method="post">
-                <h4>Her kan du logge ind med din konto</h4>
+                <h4>Her kan du logge ind med din konto.</h4>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="Input.Email">Din eMail</label>
+                    <label asp-for="Input.Email">Din email</label>
                     <input asp-for="Input.Email" class="form-control" />
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
