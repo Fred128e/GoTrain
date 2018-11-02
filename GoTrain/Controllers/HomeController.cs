@@ -14,7 +14,7 @@ namespace GoTrain.Controllers
         {
             return View();
         }
-
+        
         public IActionResult About()
         {
             ViewData["Message"] = "Welfare Danmark";
